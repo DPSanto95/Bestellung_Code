@@ -1,10 +1,8 @@
 package com.cc.java;
-
-public class App 
+public class App {
     
     public static void main(String[] args) 
-    {
-        
+    { 
         // Variablen deklarieren
         String food = "noch kein Burger gewählt";
         String drink = "noch kein Getränk gewählt";
@@ -12,13 +10,17 @@ public class App
         String flag;
         System.out.println(food);  
         System.out.println(drink); 
-        // Bestelldialog 1 : Ausgabe
+        // Bestelldialog 1 : Ausgabe1
         System.out.println("-------------------------------");
         System.out.println("Guten Tag bei MD, Ihre Bestellung bitte!");
         System.out.println("Hamburger(1), Cheeseburger(2) oder Chilliburger(3) ?");
-        // Bestelldialog 1 : Eingabe
+
+        // Bestelldialog 1 : Eingabe1
         itemNumStr = System.console().readLine("Ihre Wahl? : ");
         System.out.println(itemNumStr);  // 1 oder 2 oder 3
+        // System.out.println(itemNumStr);  // 1 oder 2 oder 3
+
+
         // Zuordnung Zahl --> Burger
         switch (itemNumStr)
         {
@@ -33,12 +35,19 @@ public class App
                 break;
         }
         System.out.println(food);
+
+
+       
         // Entscheidung Getränk dazu?
+        System.out.println("-------------------------------");
         System.out.println("Möchten Sie ein Getränk dazu bestellen? (j/n)");
         flag = System.console().readLine("(j/n)? :");
+
         System.out.println(flag);
+        // System.out.println(flag);
+
       	 // Getränkeasuwahl
-        if (flag.equals("j")) 
+        if (flag.equals("j")) {
             System.out.println("Cola(1) , Fanta(2), Sprite(3)?");
            itemNumStr = System.console().readLine("Ihre Wahl? : ");
             switch (itemNumStr)
@@ -50,8 +59,13 @@ public class App
                     drink = "Fanta";
                     break;
                 case "3":
-            
                     drink = "Sprite" ;
                     break;
             }
+            System.out.println("Hier ist Ihre Bestellung: " +  food + " und " +  drink);
+        } else{
+            System.out.println("Hier ist Ihre Bestellung: " +  food);
         }
+        System.out.println("Vielen Dank, und Auf Wiedersehen!");
+    }
+}
