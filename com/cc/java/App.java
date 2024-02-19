@@ -10,6 +10,7 @@ public class App {
         String flag;
         System.out.println(food);  
         System.out.println(drink); 
+        
         // Bestelldialog 1 : Ausgabe1
         System.out.println("-------------------------------");
         System.out.println("Guten Tag bei MD, Ihre Bestellung bitte!");
